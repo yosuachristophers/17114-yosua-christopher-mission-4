@@ -4,39 +4,58 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Tailwind CSS -->
-        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com"></script>         
+
+        <!-- Boxicon -->
+        <link href='https://cdn.boxicons.com/3.0.3/fonts/basic/boxicons.min.css' rel='stylesheet'>
 
         <!-- Utilities -->
-        <link rel="stylesheet" href="/css/beranda.css">
+        <link rel="stylesheet" href="style.css">
 
         <!-- Title Of Page -->
-        <title>To Do App | Home</title>
+        <title>Focus.Flow | Home</title>
     </head>
     <body>
-        <!-- Quest -->
-         <div class="flex-row bg-red-700 p-4">
-            <!-- New Task -->
-            <div class="bg-blue-500 flex flex-col">
-                <h1>Judul Quest</h1>
-                <div class="flex flex-row">
-                    <div>
-                        <input type="checkbox" name="" id="">
-                    </div>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus asperiores, distinctio pariatur voluptate velit cupiditate inventore reprehenderit perspiciatis vel aspernatur.</p>
-                    </div>
+
+        <!-- Navbar -->
+        <div class="container flex flex-row justify-between items-center p-4">
+
+            <div class="flex flex-row bg-white p-2 space-x-4 items-center rounded-xl">
+                <!-- User Logo -->
+                <img src="/img/user.png" class="w-10" alt="">
+
+                <!-- User Information -->
+                <div class="flex flex-col">
+                    <h1 style="font-family: 'Poppins', sans-serif;" class="font-black text-md">Yosua Christopher</h1>
+                    <h2 style="font-family: 'Poppins', sans-serif;" class="text-md">Project Manager</h2>
                 </div>
             </div>
 
-            <!-- On Progress -->
-            <div class="bg-yellow-500 flex">
-                <h1>quest</h1>
+            <!-- Setting Logo -->
+            <div class="bg-white rounded-sm">
+                <i class='bxrd  bx-slider'></i>
+            </div>  
+        </div>
+
+        <!-- Hero Banner -->
+         <div class="container flex flex-col px-4 border-4 border-red-700">
+            <div class="flex flex-row">
+            <div class="flex flex-col w-2/4 space-y-[-100px] border-4 border-blue-700 justify-start items-start">
+                <h1 class="font-league text-[144px]">FOC.</h1>
+                <h1 class="font-league text-[144px]">FLOW</h1>
             </div>
 
-            <!-- Done -->
-            <div class="bg-purple-500 flex">
-                <h1>quest</h1>
+            <div class="flex flex-col w-2/4 border-4 border-green-700">
+                <div class="justify-end items-end flex flex-col">
+                    <h5 class="text-xs">Sunday, 16 September 2025</h5>
+                    <h5 class="text-xs">19:14:20</h5>
+                </div>
+                <div class="flex justify-end items-end">
+                    <img class="w-[120px]" src="/img/leftmythrone-logo.png" alt="">
+                </div>
+            </div>
             </div>
          </div>
+
     </body>
     </html>
