@@ -18,7 +18,7 @@
     <body>
 
         <!-- Navbar -->
-        <div class="container flex flex-row justify-between items-center p-4">
+        <div class="container mx-auto flex flex-row justify-between items-center p-4">
 
             <div class="flex flex-row bg-white p-2 space-x-4 items-center rounded-xl">
                 <!-- User Logo -->
@@ -32,30 +32,47 @@
             </div>
 
             <!-- Setting Logo -->
-            <div class="bg-white rounded-sm">
-                <i class='bxrd  bx-slider'></i>
+            <div class="flex bg-white rounded-sm h-[60px] justify-center items-center p-4 rounded-xl">
+                <i class='bxrd  bx-slider text-2xl'></i>
             </div>  
         </div>
 
         <!-- Hero Banner -->
-         <div class="container flex flex-col px-4 border-4 border-red-700">
+         <div class="container mx-auto flex flex-col px-4">
             <div class="flex flex-row">
-            <div class="flex flex-col w-2/4 space-y-[-100px] border-4 border-blue-700 justify-start items-start">
-                <h1 class="font-league text-[144px]">FOC.</h1>
-                <h1 class="font-league text-[144px]">FLOW</h1>
+                <div class="flex flex-col w-2/4 h-[270px] justify-start items-start">
+                    <h1 class="font-league text-[144px] leading-none mt-[-15px]">FOC.</h1>
+                    <h1 class="font-league text-[144px] leading-none mb-[-15px]">FLOW</h1>
+                </div>
+
+                <div class="flex flex-col w-2/4 justify-between">
+                    <!-- Date & Time -->
+                    <div class="justify-end items-end flex flex-col">
+                        <h5 class="text-xs">Sunday, 16 September 2025</h5>
+                        <h5 class="text-xs">19:14:20</h5>
+                    </div>
+
+                    <!-- Black Dot -->
+                    <div class="flex justify-end">
+                        <div class="bg-black w-[20px] h-[20px]"></div>
+                    </div>
+
+                    <!-- Logo Of Creator -->
+                    <div class="flex justify-end items-end">
+                        <img class="w-[160px]" src="/img/leftmythrone-logo.png" alt="">
+                    </div>
+                </div>
             </div>
 
-            <div class="flex flex-col w-2/4 border-4 border-green-700">
-                <div class="justify-end items-end flex flex-col">
-                    <h5 class="text-xs">Sunday, 16 September 2025</h5>
-                    <h5 class="text-xs">19:14:20</h5>
+            <!-- Plus -->
+            <div class="container mx-auto flex flex-row justify-end items-end">
+                <div class=" w-2/4">
+                    <h1 class="font-league text-[60px] leading-none my-[-15px] font-extrabold w-2/4">+</h1>
                 </div>
-                <div class="flex justify-end items-end">
-                    <img class="w-[120px]" src="/img/leftmythrone-logo.png" alt="">
+                <div class=" w-2/4 flex justify-end">
+                    <h5 class="text-xs leading-none m-0">@yosuachristohers</h5>
                 </div>
-            </div>
             </div>
          </div>
-
     </body>
     </html>
