@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "LeagueGothic";
+  src: url("/fonts/League_Gothic/LeagueGothic-Regular-VariableFont_wdth.ttf") format("opentype");
+  font-weight: 400;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f5f9;
+  }
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-league {
+  font-family: "LeagueGothic", sans-serif;
+}
+
+/* Mematikan scrollbars */
+::-webkit-scrollbar {
+  display: auto;
+}
+
+/* Menyesuaikan warna latar belakang scrollbars */
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+/* Menyesuaikan warna thumb (bagian yang dapat digeser) scrollbars */
+::-webkit-scrollbar-thumb {
+  background-color: #15161A;
+}
+
+/* Menyesuaikan ukuran thumb (bagian yang dapat digeser) scrollbars */
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  height: 10px;
+}
+
+/* Menyesuaikan radius sudut thumb (bagian yang dapat digeser) scrollbars */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+}
+}
