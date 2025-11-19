@@ -12,6 +12,8 @@
         <!-- Utilities -->
         <link rel="stylesheet" href="style.css">
 
+        <script src="script.js" defer></script>
+
         <!-- Title Of Page -->
         <title>Focus.Flow | Home</title>
     </head>
@@ -56,8 +58,8 @@
                 <div class="flex flex-col w-2/4 justify-between">
                     <!-- Date & Time -->
                     <div class="justify-end items-end flex flex-col">
-                        <h5 class="text-xs">Sunday, 16 September 2025</h5>
-                        <h5 class="text-xs">19:14:20</h5>
+                        <h5 class="text-xs" id="tanggal"></h5>
+                        <h5 class="text-xs" id="clock"></h5>
                     </div>
 
                     <!-- Black Dot -->
@@ -67,7 +69,7 @@
 
                     <!-- Logo Of Creator -->
                     <div class="flex justify-end items-end">
-                        <img class="w-[160px]" src="/img/leftmythrone-logo.png" alt="">
+                        <img class="w-[130px]" src="/img/leftmythrone-logo.png" alt="">
                     </div>
                 </div>
             </div>
@@ -94,24 +96,153 @@
             
             <!-- Left -->
             <div class="flex flex-col w-2/4 pl-4 pr-2 space-y-3">
+
+                <!-- Urgency -->
                 <div class="w-full h-[110px] bg-white rounded-xl p-4">
+                    
+                    <!-- Level Tag -->
                     <div class="flex flex-row items-center space-x-2">
                         <div class="w-[20px] h-[20px] rounded-full bg-[#ff3131]"></div>
                         <h2 style="font-family: 'Poppins', sans-serif;" class="text-md">Urgent</h2>
                     </div>
-                </div>
-                <div class="w-full h-[110px] bg-white rounded-xl">
 
+                    <!-- Counting -->
+                    <div class="flex justify-center items-center mt-2 h-[60px]">
+                        <h1 class="font-league text-[40px] leading-none mb-[20px]">1</h1>
+                    </div>
+                </div>
+
+                <!-- Medium -->
+                <div class="w-full h-[110px] bg-white rounded-xl p-4">
+                    
+                    <!-- Level Tag -->
+                    <div class="flex flex-row items-center space-x-2">
+                        <div class="w-[20px] h-[20px] rounded-full bg-[#fdd900]"></div>
+                        <h2 style="font-family: 'Poppins', sans-serif;" class="text-md">Medium</h2>
+                    </div>
+
+                    <!-- Counting -->
+                    <div class="flex justify-center items-center mt-2 h-[60px]">
+                        <h1 class="font-league text-[40px] leading-none mb-[20px]">1</h1>
+                    </div>
                 </div>
             </div>
 
             <!-- Right -->
             <div class="flex flex-col w-2/4 pr-4 pl-2 space-y-3">
-                <div class="w-full h-[110px] bg-white rounded-xl">
 
+                <!-- High -->
+                <div class="w-full h-[110px] bg-white rounded-xl p-4">
+                    
+                    <!-- Level Tag -->
+                    <div class="flex flex-row items-center space-x-2">
+                        <div class="w-[20px] h-[20px] rounded-full bg-[#f6931e]"></div>
+                        <h2 style="font-family: 'Poppins', sans-serif;" class="text-md">High</h2>
+                    </div>
+
+                    <!-- Counting -->
+                    <div class="flex justify-center items-center mt-2 h-[60px]">
+                        <h1 class="font-league text-[40px] leading-none mb-[20px]">1</h1>
+                    </div>
                 </div>
-                <div class="w-full h-[110px] bg-white rounded-xl">
 
+                <!-- Low -->
+                <div class="w-full h-[110px] bg-white rounded-xl p-4">
+                    
+                    <!-- Level Tag -->
+                    <div class="flex flex-row items-center space-x-2">
+                        <div class="w-[20px] h-[20px] rounded-full bg-[#7ed957]"></div>
+                        <h2 style="font-family: 'Poppins', sans-serif;" class="text-md">Low</h2>
+                    </div>
+
+                    <!-- Counting -->
+                    <div class="flex justify-center items-center mt-2 h-[60px]">
+                        <h1 class="font-league text-[40px] leading-none mb-[20px]">1</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  
+        |--------------------------------------------------------------------------
+        | Workspace Section
+        |--------------------------------------------------------------------------
+        -->
+        <div class="container w-full bg-white mx-auto mt-4 p-4 rounded-xl">
+
+
+
+
+            <div id="date-list" class="flex gap-3 overflow-x-auto py-4">
+    <button class="date-item flex flex-col items-center p-3 border rounded-xl text-gray-600" data-date="2025-11-01">
+        <span class="font-bold">Mon</span>
+        <span>01</span>
+    </button>
+    <button class="date-item flex flex-col items-center p-3 border rounded-xl text-gray-600" data-date="2025-11-02">
+        <span class="font-bold">Tue</span>
+        <span>02</span>
+    </button>
+    <button class="date-item flex flex-col items-center p-3 border rounded-xl text-gray-600" data-date="2025-11-03">
+        <span class="font-bold">Thu</span>
+        <span>03</span>
+    </button>
+    <!-- dan seterusnya -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="flex flex-col w-4/5 mx-auto space-y-3">
+                <!-- Urgent -->
+                <div class="bg-[#ff3131] w-full rounded-xl">
+                    <div class="flex-flex-col bg-[#f4f5f9] p-4 rounded-xl mt-2 space-y-2">
+                        <div class="flex flex-row space-x-2 justify-start items-start">
+                            <input class="w-[20px]" type="checkbox" name="" id="">
+                            <h1 class="font-extrabold text-lg leading-none">Lorem ipsum dolor amet.</h1>
+                        </div>
+                        <p class="text-md">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et voluptas sunt minus ipsa sequi corrupti maxime harum magnam ut voluptatem?</p>
+                    </div>
+                </div>
+
+                <!-- High -->
+                <div class="bg-[#f6931e] w-full rounded-xl">
+                    <div class="flex-flex-col bg-[#f4f5f9] p-4 rounded-xl mt-2 space-y-2">
+                        <div class="flex flex-row space-x-2 justify-start items-start">
+                            <input class="w-[20px]" type="checkbox" name="" id="">
+                            <h1 class="font-extrabold text-lg leading-none">Lorem ipsum dolor amet.</h1>
+                        </div>
+                        <p class="text-md">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et voluptas sunt minus ipsa sequi corrupti maxime harum magnam ut voluptatem?</p>
+                    </div>
+                </div>
+
+                <!-- Medium -->
+                <div class="bg-[#fdd900] w-full rounded-xl">
+                    <div class="flex-flex-col bg-[#f4f5f9] p-4 rounded-xl mt-2 space-y-2">
+                        <div class="flex flex-row space-x-2 justify-start items-start">
+                            <input class="w-[20px]" type="checkbox" name="" id="">
+                            <h1 class="font-extrabold text-lg leading-none">Lorem ipsum dolor amet.</h1>
+                        </div>
+                        <p class="text-md">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et voluptas sunt minus ipsa sequi corrupti maxime harum magnam ut voluptatem?</p>
+                    </div>
+                </div>
+
+                <!-- Low -->
+                <div class="bg-[#7ed957] w-full rounded-xl">
+                    <div class="flex-flex-col bg-[#f4f5f9] p-4 rounded-xl mt-2 space-y-2">
+                        <div class="flex flex-row space-x-2 justify-start items-start">
+                            <input class="w-[20px]" type="checkbox" name="" id="">
+                            <h1 class="font-extrabold text-lg leading-none">Lorem ipsum dolor amet.</h1>
+                        </div>
+                        <p class="text-md">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et voluptas sunt minus ipsa sequi corrupti maxime harum magnam ut voluptatem?</p>
+                    </div>
                 </div>
             </div>
         </div>
