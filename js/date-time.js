@@ -31,40 +31,46 @@ function getTanggalFormatInggris() {
 document.getElementById("tanggal").textContent = getTanggalFormatInggris();
 
 
-// Date Time
-document.addEventListener("DOMContentLoaded", () => {
+// Month Picker Default to Current Month
     const monthPicker = document.getElementById("monthPicker");
-    const now = new Date();
-    monthPicker.value = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2, "0")}`;
-});
-
-
-// Beda Lagi
     const dateList = document.getElementById("date-list");
 
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = today.getMonth(); // 0 - 11
-
-    // jumlah hari dalam bulan ini
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-
-    // nama hari
     const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-    for (let day = 1; day <= daysInMonth; day++) {
-        const date = new Date(year, month, day);
-        const dayName = dayNames[date.getDay()];
-        const fullDate = date.toISOString().split("T")[0]; // yyyy-mm-dd
+    function generateDates(year, month) {
+        dateList.innerHTML = ""; // reset isi
 
-        const button = document.createElement("button");
-        button.className = "date-item flex flex-col items-center p-3 border rounded-xl text-gray-600";
-        button.dataset.date = fullDate;
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-        button.innerHTML = `
-            <span class="font-bold">${dayName}</span>
-            <span>${String(day).padStart(2, "0")}</span>
-        `;
+        for (let day = 1; day <= daysInMonth; day++) {
+            const date = new Date(year, month, day);
+            const dayName = dayNames[date.getDay()];
+            const fullDate = date.toISOString().split("T")[0];
 
-        dateList.appendChild(button);
+            const button = document.createElement("button");
+            button.className =
+                "date-item flex flex-col items-center p-3 border rounded-xl text-gray-600 min-w-[64px]";
+            button.dataset.date = fullDate;
+
+            button.innerHTML = `
+                <span class="font-bold">${dayName}</span>
+                <span>${String(day).padStart(2, "0")}</span>
+            `;
+
+            dateList.appendChild(button);
+        }
     }
+
+    // 🔹 Set default ke bulan sekarang
+    const today = new Date();
+    const currentYear = today.getFullYear();
+    const currentMonth = today.getMonth();
+
+    monthPicker.value = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}`;
+    generateDates(currentYear, currentMonth);
+
+    // 🔹 Event saat bulan diganti
+    monthPicker.addEventListener("change", () => {
+        const [year, month] = monthPicker.value.split("-");
+        generateDates(parseInt(year), parseInt(month) - 1);
+    });
