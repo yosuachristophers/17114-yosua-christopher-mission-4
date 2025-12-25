@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -12,18 +12,21 @@
         <!-- Utilities -->
         <link rel="stylesheet" href="style.css">
 
-        <script src="script.js" defer></script>
+        <script src="/js/date-time.js" defer></script>
 
         <!-- Title Of Page -->
         <title>Focus.Flow | Home</title>
     </head>
-    <body>
+    <body class="bg-white xl:bg-black">
 
+        <div class="container mx-auto xl:w-[25%] bg-[#f4f5f9] my-5 rounded-2xl">
+
+        
         <!--  
         |--------------------------------------------------------------------------
         | Navigation Bar
         |--------------------------------------------------------------------------
-        -->
+        --> 
         <div class="container mx-auto flex flex-row justify-between items-center p-4">
 
             <div class="flex flex-row bg-white p-2 space-x-4 items-center rounded-xl">
@@ -43,7 +46,7 @@
             </div>  
         </div>
 
-        <!--  
+        <!--    
         |--------------------------------------------------------------------------
         | Hero Banner
         |--------------------------------------------------------------------------
@@ -129,7 +132,7 @@
             </div>
 
             <!-- Right -->
-            <div class="flex flex-col w-2/4 pr-4 pl-2 space-y-3">
+                <div class="flex flex-col w-2/4 pr-4 pl-2 space-y-3">
 
                 <!-- High -->
                 <div class="w-full h-[110px] bg-white rounded-xl p-4">
@@ -158,7 +161,7 @@
                     <!-- Counting -->
                     <div class="flex justify-center items-center mt-2 h-[60px]">
                         <h1 class="font-league text-[40px] leading-none mb-[20px]">1</h1>
-                    </div>
+                    </div>.
                 </div>
             </div>
         </div>
@@ -168,38 +171,24 @@
         | Workspace Section
         |--------------------------------------------------------------------------
         -->
+
+
+
         <div class="container w-full bg-white mx-auto mt-4 p-4 rounded-xl">
 
+            <!-- This Month --> 
+            <div class="container flex justify-center items-center rounded-md">
+                <input id="monthPicker" type="month" class="font-extrabold text-2xl h-14 bg-[#f4f5f9] w-full rounded-2xl flex justify-center items-center"></input>
+            </div>
 
-
-
+            <!-- Chose Date -->
             <div id="date-list" class="flex gap-3 overflow-x-auto py-4">
-    <button class="date-item flex flex-col items-center p-3 border rounded-xl text-gray-600" data-date="2025-11-01">
-        <span class="font-bold">Mon</span>
-        <span>01</span>
-    </button>
-    <button class="date-item flex flex-col items-center p-3 border rounded-xl text-gray-600" data-date="2025-11-02">
-        <span class="font-bold">Tue</span>
-        <span>02</span>
-    </button>
-    <button class="date-item flex flex-col items-center p-3 border rounded-xl text-gray-600" data-date="2025-11-03">
-        <span class="font-bold">Thu</span>
-        <span>03</span>
-    </button>
-    <!-- dan seterusnya -->
-</div>
+                <!-- dan seterusnya -->
+            </div>
 
+        <br>
 
-
-
-
-
-
-
-
-
-
-
+        <!-- Workspace -->
             <div class="flex flex-col w-4/5 mx-auto space-y-3">
                 <!-- Urgent -->
                 <div class="bg-[#ff3131] w-full rounded-xl">
@@ -209,6 +198,9 @@
                             <h1 class="font-extrabold text-lg leading-none">Lorem ipsum dolor amet.</h1>
                         </div>
                         <p class="text-md">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et voluptas sunt minus ipsa sequi corrupti maxime harum magnam ut voluptatem?</p>
+                        
+                        <!-- Deadline -->
+                        <div class="w-full flex justify-end items-end"><h3 class="text-xs">25 - 11 - 2025</h3></div> 
                     </div>
                 </div>
 
@@ -220,6 +212,9 @@
                             <h1 class="font-extrabold text-lg leading-none">Lorem ipsum dolor amet.</h1>
                         </div>
                         <p class="text-md">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et voluptas sunt minus ipsa sequi corrupti maxime harum magnam ut voluptatem?</p>
+                    
+                        <!-- Deadline -->
+                        <div class="w-full flex justify-end items-end"><h3 class="text-xs">25 - 11 - 2025</h3></div> 
                     </div>
                 </div>
 
@@ -231,6 +226,9 @@
                             <h1 class="font-extrabold text-lg leading-none">Lorem ipsum dolor amet.</h1>
                         </div>
                         <p class="text-md">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et voluptas sunt minus ipsa sequi corrupti maxime harum magnam ut voluptatem?</p>
+                    
+                        <!-- Deadline -->
+                        <div class="w-full flex justify-end items-end"><h3 class="text-xs">25 - 11 - 2025</h3></div> 
                     </div>
                 </div>
 
@@ -242,9 +240,28 @@
                             <h1 class="font-extrabold text-lg leading-none">Lorem ipsum dolor amet.</h1>
                         </div>
                         <p class="text-md">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et voluptas sunt minus ipsa sequi corrupti maxime harum magnam ut voluptatem?</p>
+                    
+                        <!-- Deadline -->
+                        <div class="w-full flex justify-end items-end"><h3 class="text-xs">25 - 11 - 2025</h3></div> 
                     </div>
                 </div>
+
+                <!-- Submit & Completed -->
+                <div class="flex flex-row space-x-2">
+                    <button id="" class="bg-black w-2/4 justify-center items-center flex rounded-md h-10">
+                        <h2 class="text-white font-extrabold">Add Task</h2>
+                    </button>
+
+                    <button id="" class="bg-white w-2/4 justify-center items-center flex rounded-md border-4 border-black h-10">
+                        <h2 class="font-extrabold">Completed</h2>
+                    </button>
+                </div>
             </div>
+            
+        </div>
+
+
+        <!-- Closer -->
         </div>
     </body>
-    </html>
+</html>
